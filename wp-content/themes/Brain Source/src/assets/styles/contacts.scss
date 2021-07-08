@@ -1,0 +1,359 @@
+@import "global";
+@import "header";
+@import "footer";
+
+.country-address{
+    margin-top: 13px;
+    .select-wrap{
+        position: relative;
+        width: max-content;
+        &::after{
+            top: 15px;
+            position: absolute;
+            content: url(../../img/arrow.svg);
+            right: 20px;
+            transform: rotate(90deg);
+        }
+    }
+    select{
+        width: 340px;
+        height: 50px;
+        font-size: 18px;
+        color: #3A3A3A;
+        padding: 13px 0px 13px 25px;
+        -webkit-appearance: none;
+        appearance: none;
+    }
+}
+
+.address-list{
+    margin-bottom: 40px;
+    margin-top: 63px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.address-list-item{
+    width: 33%;
+    box-sizing: border-box;
+    margin-bottom: 30px;
+    padding-right: 20px;
+    &:not(:nth-child(3n+3)){
+        border-right: 1px solid #EFEFEF;
+    }
+    &:not(:nth-child(3n+1)){
+        padding-left: 60px;
+    }
+    h3{
+        font-size: 20px;
+        font-weight: 400;
+        margin-bottom: 33px;
+    }
+    .address, .fax-phone, .number, .mail{
+        font-size: 16px;
+        font-weight: 400;
+        margin-bottom: 30px;
+        a:hover{
+            color: $cstBlue;
+        }
+        &::before{
+            margin-right: 15px;
+            position: relative;
+            top: 2px;
+        }
+    }
+    .address{
+        line-height: 25px;
+    }
+    .address::before{
+        content: url('../../img/Location.svg');
+
+    }
+    .fax-phone{
+        display: flex;
+        align-items: flex-start;
+        p{
+            margin-top:0px ;
+            font-size: 14px;
+            font-weight: 400;
+            color: $cstGrey;
+            margin-bottom: 4px;
+        }
+        h4{
+            font-weight: 400;
+            margin-bottom: 0px;
+        }
+        &::before{
+            content: url('../../img/fax.svg');
+        }
+    }
+    .number{
+        &::before{
+            content: url('../../img/phone.svg');
+        }
+    }
+    .mail{
+        &::before{
+            content: url('../../img/Message-red.svg');
+        }
+        a{
+            color: $cstBlue;
+        }
+    }
+}
+
+.main-form{
+    background-color: #F9F9F9;
+    position: relative;
+    border: 3px solid #2B88FF;
+    border-radius: 10px;
+    img{
+        height: 100%;
+        width: auto;
+        left: 0;
+        bottom: 0;
+        position: absolute;
+    }
+
+    .main-form-block{
+        width: 710px;
+        margin-left: auto;
+        padding: 75px 60px;
+        .input-row {
+            margin-top: 35px;
+            label{
+                font-size: 16px;
+                span{
+                    color: $cstRed;
+                }
+                margin-bottom: 6px;
+            }
+            .input-wrap{
+                width: 100%;
+            }
+            .input-wrap:first-child{
+                margin-right: 30px;
+            }
+            input{
+                width: 100%;
+                height: 54px;
+                border: 1px solid #DDDDDD;
+                box-sizing: border-box;
+                border-radius: 5px;
+                padding: 10px;
+                font-size: 16px;
+            }
+        }
+    }
+
+    textarea{
+        background: #FFFFFF;
+        border: 1px solid #DDDDDD;
+        box-sizing: border-box;
+        border-radius: 5px;
+        height: 100%;
+    }
+    .main-btn{
+        width: 340px;
+        height: 56px;
+        margin-top: 35px;
+        display: flex;
+        margin-left: auto;
+    }
+}
+.error-text{
+  font-size: 10px;
+  margin-top: 5px;
+  margin-left: auto;
+  display: none;
+  color: #EB3D00;
+}
+
+.obligatory{
+  width: 100%;
+  height: 100%;
+  textarea{
+    width: 100%;
+  }
+}
+
+.obligatory.error .error-text{
+  width: max-content;
+  display: block;
+}
+.obligatory.error {
+  
+  input, textarea{
+    border: 1px solid #EB3D00!important;
+    position: relative;
+  }
+}
+.obligatory.checked{
+  position: relative;
+  &::after{
+    top: 17px;
+    right: 15px;
+    content: url('../../img/no_error.png');
+    position: absolute;
+  }
+  input, textarea{
+    border: 1px solid #01A011!important;
+  }
+}
+
+.obligatory.error {
+  position: relative;
+  &::after{
+    top: 17px;
+    right: 15px;
+    content: url('../../img/error.png');
+    position: absolute;
+  }
+}
+
+
+.input-comlpex{
+margin-right: 30px;
+width: 100%;
+}
+
+.capcha-row{
+    margin-top: 34px;
+    input{
+        width: 100%;
+    }
+}
+.capcha{
+    background: #E1E1E1;
+    border-radius: 5px;
+    font-size: 24px;
+    font-weight: 700;
+    margin-right: 20px;
+    width: 100%;
+}
+
+.contact-message-mob{
+    display: none;
+}
+
+.capcha-wrap{
+    margin-top: 6px;
+}
+
+@media(max-width:1440px){
+    .main-form img{
+        width: 30%;
+        height: auto;
+    }
+}
+
+@media(max-width:1280px){
+    .main-form img{
+        display: none;
+    }
+    .address-list-item:not(:nth-child(even)) {
+        border-right: 1px solid #efefef!important;
+    }
+    .address-list-item{
+        width: 45%;
+    }
+    .address-list-item:not(:nth-child(3n+3)) {
+        border-right: none;
+    }
+    .address-list-item:not(:nth-child(3n+1)) {
+        padding-left: 0px;
+    }
+}
+
+@media(max-width:920px){
+    .main-form .main-btn{
+        margin-top: 50px!important;
+        margin: auto;
+    }
+    .main-form .main-form-block {
+        margin: 0px;
+        padding: 50px 30px;
+         width: 100%;
+         box-sizing: border-box;
+    }
+    
+}
+
+@media(max-width:576px){
+    .main-form .main-btn{
+        width: 100%;
+        margin-top: 26px!important;
+        font-size: 12px;
+        height: 42px;
+    }
+    .main-form textarea{
+        height: 90px;
+    }
+    .capcha-row{
+        margin-top: 21px;
+        .input-wrap{
+            margin-top: 0px!important;
+        }
+    }
+    .contact-message{
+        display: none;
+    }
+    .contact-message-mob{
+        margin-top: 21px;
+        display: flex;
+    }
+    .main-form-block {
+        padding: 30px 16px!important;
+        h2{
+            font-size: 18px;
+            text-align: center;
+        }
+    }
+    .main-form .main-form-block .input-row {
+        flex-direction: column;
+        margin-top: 21px;
+        input{
+            height: 42px;
+            font-size: 12px;
+        }
+        label{
+            font-size: 12px;
+        }
+        .input-wrap{
+            width: 100%;
+            &:last-child{
+                margin-top: 21px;
+            }
+        }
+    }
+    .address-list-item:not(:nth-child(2n)){
+        border-right: none!important;
+    }
+    .address-list{
+        margin-top: 25px;
+    }
+    .address-list-item{
+        width: 100%;
+        .fax-phone p{
+            font-size: 10px;
+        }
+        h3{
+            margin-top: 0px;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+        .address, .fax-phone, .mail, .number{
+            font-size: 12px;
+            margin-bottom: 15px;
+        }
+    }
+    .country-address .select-wrap{
+        width: 100%;
+        select{
+            width: 100%;
+            font-size: 12px;
+            height: 42px;
+        }
+    }
+}

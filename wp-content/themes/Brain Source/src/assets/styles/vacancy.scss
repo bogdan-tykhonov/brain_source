@@ -1,0 +1,50 @@
+@import "global";
+@import "header";
+@import "footer";
+
+.vacancy-block{
+    h2{
+        margin-bottom: 25px;
+    }
+}
+
+.vacancy-block-list{
+    flex-wrap: wrap;
+    .vacancy-article{
+            margin-bottom: 40px;
+    }
+}
+
+@media(max-width:768px){
+    .vacancy-article{
+        width: 45%;
+    }
+    .vacancy-block-list .vacancy-article{
+        margin-bottom: 40px!important;
+    }
+}
+
+@media(max-width:576px){
+    .vacancy-block-list .vacancy-article{
+        margin-bottom: 19px!important;
+    }
+    .vacancy-article{
+        margin-bottom: 19px!important;
+        height: auto;
+        padding: 10px 16px;
+        border-left: 1px solid $cstRed;
+        width: 100%;
+        h3{
+            font-size: 14px;
+        }
+        p{
+            margin: 7px 0 11px;
+        }
+        p,a{
+            font-size: 10px;
+        }
+        a{
+            line-height: 8px;
+        }
+    }
+}

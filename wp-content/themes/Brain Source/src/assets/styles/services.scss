@@ -1,0 +1,117 @@
+@import "global";
+@import "header";
+@import "footer";
+
+.services-block-info{
+    figure{
+        margin-left: 0px!important;
+        margin-right: 0px!important;
+    }
+    img{
+        height: auto!important;
+    }
+    p, h4, li {
+        font-size: 16px;
+        color: $cstGrey;
+        font-weight: 400;
+        line-height: 24px;
+    }
+    h4{
+        margin-top: 20px;
+        margin-bottom: 9px;
+    }
+
+    ul{
+        margin-bottom: 21px;
+        li{
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+            &::before{
+                content: '';
+                padding-left: 7px;
+                height: 7px;
+                background-color: $cstBlue;
+                border-radius: 100%;
+                display: inline;
+                margin-top: 8px;
+                margin-right: 10px;
+            }
+        }
+    }
+
+}
+
+
+@media(max-width:1280px){
+    // .service-wrap{
+    //     img{
+    //         width: 45%;
+    //     }
+    // }
+    // .clients-info{
+    //     margin-right: 0px;
+    //     width: 50%;
+    // }
+    // .candidates-info{
+    //     margin-left: 0px;
+    //     width: 50%;
+    // }
+}
+
+@media(max-width:960px){
+    // .service-wrap{
+    //     flex-direction: column;
+    //     .clients-info, .candidates-info{
+    //         width: 100%;
+    //         margin-top: 30px;
+    //     }
+    //     .candidates-info{
+    //         margin-left: 0px;
+    //     }
+    //     .clients-info{
+    //         margin-right: 0px;
+    //     }
+    //     img{
+    //         width: 60%;
+    //     }
+    // }
+    // .services-for-clients{
+    //     flex-direction: column-reverse;
+    //}
+}
+
+@media(max-width:576px){
+    // .services-for-clients, .services-for-candidates{
+    //     margin-top: 35px;
+    // }
+    p, h4, li {
+        font-size: 12px;
+        line-height: 18px;
+    }
+    // .services-mob-heading{
+    //     margin-bottom: 12px;
+    //     width: 100%;
+    //     display: block;
+    // }
+    // .candidates-info, .clients-info{
+    //     h2{
+    //         display: none;
+    //     }
+    // }
+    .service-wrap{
+        img{
+            width: 100%;
+        }
+    }
+    ul{
+        li{
+            margin-bottom: 15px!important;
+            &::before{
+                padding-left: 4px!important;
+                height: 4px!important;
+                margin-right: 10px!important;
+            }
+        }
+    }
+}

@@ -1,0 +1,150 @@
+@import "global";
+@import "header";
+@import "footer";
+
+
+.vacancy-code{
+    font-size: 14px;
+    color: $cstGrey;
+    margin: 20px 0;
+}
+
+.vacancy-info{
+    .requirements{
+        h4{
+            font-size: 16px;
+            font-weight: 400;
+            margin-bottom: 12px;
+        }
+        p{
+            font-size: 18px;
+            font-weight: 700;
+        }
+    }
+    h3{
+        font-weight: 400;
+        font-size: 16px;
+        margin-top: 45px;
+    }
+    ul{
+        margin-top: 10px;
+        li{
+            &::before{
+                content: '';
+                width: 7px;
+                height: 7px;
+                background-color: $cstBlue;
+                border-radius: 100%;
+                display: inline;
+                margin-top: 5px;
+                margin-right: 12px;
+            }
+        }
+    }
+
+    ul, ol{
+        margin-top: 10px;
+        li{
+            display: flex;
+            align-items: flex-start;
+            font-size: 16px;
+            color: $cstGrey;
+        &:not(:last-child){
+            margin-bottom: 25px;
+        }
+    }
+ }
+    
+
+    ol{
+        padding: 0px;
+        margin-top: 10px;
+       li{
+        &::before{
+            content: url("../../img/check_blue.svg");
+            display: inline;
+            margin-right: 8px;
+        }
+       }
+    
+ }
+ .additional-info{
+     h3{
+        font-size: 16px;
+        color: $cstRed;
+        font-weight: 400;
+        margin: 38px 0 30px;
+     }
+     p{
+        font-size: 16px;
+        a{
+            color: $cstBlue;
+        }
+     }
+ }
+
+}
+
+@media(max-width:567px){
+    .vacancy-info{
+        h2{
+            font-size: 18px;
+        }
+    }
+    .vacancy-info .additional-info{
+        h3{
+            font-size: 12px;
+            margin: 23px 0 20px;
+        }
+        p{
+            font-size: 12px;
+            margin: 0px;
+        }
+    }
+    .vacancy-info ol li:before{
+        top: 3px;
+        position: relative;
+        content: '';
+        background-image: url(../../img/check_blue.svg);
+        background-size: 9px 7px;
+        width: 9px;
+        height: 7px;
+        box-sizing: border-box;
+        padding-right: 9px;
+    }
+    .vacancy-info ul li:before{
+        margin-right: 7px;
+        padding-right: 4px;
+        box-sizing: border-box;
+        width: 4px;
+        height: 4px;
+    }
+    .vacancy-info ol li, .vacancy-info ul li{
+        margin-bottom: 20px;
+        font-size: 12px;
+    }
+    .vacancy-info h3{
+        font-size: 12px;
+       margin-bottom: 8px;
+       margin-top: 0px;
+       &:not(:first-child){
+           margin-top: 27px;
+       }
+    }
+    .vacancy-info .requirements {
+        h4{
+            margin-top: 9px;
+            margin-bottom: 4px;
+            font-size: 12px;
+        }
+        p{
+            margin-bottom: 12px;
+            line-height: 18px;
+            font-size: 12px;
+        }
+    }
+    .vacancy-code{
+        margin: 10px 0;
+        font-size: 10px;
+    }
+}

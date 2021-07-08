@@ -1,0 +1,153 @@
+@import "global";
+@import "header";
+@import "footer";
+
+.achievement-item{
+    position: relative;
+    padding: 50px 0px 100px 65px;
+   &:not(:last-child){
+    border-left: 1px dashed #DDDDDD;
+   }
+}
+.achievement-year{
+    position: absolute;
+    left: -7px;
+    top: -7px;
+    .circle{
+        background: #FFFFFF;
+        border: 4px solid #2A88FF;
+        box-sizing: border-box;
+        width: 14px;
+        height: 14px;
+        margin-right: 17px;
+        border-radius: 100%;
+    }
+    h4{
+        margin: 0px;
+        font-size: 22px;
+        font-weight: 700;
+    }
+}
+
+.achievement-info{
+    max-width: 730px;
+    h3{
+        font-size: 18px;
+        font-weight: 400;
+    }
+    p{
+        line-height: 24px;
+        font-size: 16px;
+        color: $cstGrey;
+        strong{
+            color: black;
+        }
+    }
+
+}
+.achievement-mob-heading{
+    display: none;
+}
+
+.achievment-img-wrap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 60px;
+    width: 280px;
+    height: 207px;
+    background: #FFFFFF;
+    border: 1px solid #D9D9D9;
+    box-sizing: border-box;
+    img{
+        width: auto;
+        height: auto;
+    }
+}
+.achievment-img-wrap.no-wrap{
+    border:none;
+}
+
+@media(max-width:1280px){
+    .achievement-info{
+        width: 50%;
+    }
+}
+
+@media(max-width:768px){
+    .achievement-info{
+        width: 100%;
+    }
+    .achievement-item{
+        padding: 50px 0 70px 40px;
+        flex-direction: column;
+    }
+}
+
+@media(max-width:576px){
+    .achievment-img-wrap img{
+        height: 100%;
+    }
+    .achievement-year {
+        left: 0px;
+        top: -30px;
+    }
+    .achievement-info{
+        p{
+            font-size: 12px;
+            line-height: 18px;
+        }
+    }
+    .achievment-img-wrap.no-wrap{
+        img{
+            height: auto;
+            width: 100%;
+        }
+    }
+    .achievment-img-wrap{
+        margin-right: 15px;
+        min-width: 128px;
+        width: 128px;
+        height: 94px;
+        img{
+            height: 70%;
+            width: auto;
+        }
+    }
+    .achievement-year h4{
+        font-size: 16px;
+    }
+    .achievement-year .circle{
+        width: 10px;
+        height: 10px;
+        border:3px solid #2a88ff;
+    }
+    .achievement-item{
+        border-left: none!important;
+        margin-bottom: 60px;
+        padding: 0px;
+        border: none;
+        &:first-child{
+            margin-top: 40px;
+        }
+    }
+    .achievement-mob-heading{
+        display: block;
+    }
+    .achievement-info{
+        h3{
+            display: none;
+        }
+    }
+    .achievement-img-row{
+        width: 100%;
+        justify-content: space-between;
+        display: flex;
+        align-items: center;
+        h3{
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 21px;
+        }
+    }
+}
